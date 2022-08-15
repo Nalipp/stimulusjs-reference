@@ -8,10 +8,29 @@
 <body>
   <!-- <h1 data-controller="example"></h1> -->
 
+  <!-- simple version -->
   <!-- <div data-controller="hello"> -->
   <!--   <input data-hello-target="name" type="text"> -->
   <!--   <button data-action="click->hello#greet">Greet</button> -->
+  <!--   <p data-hello-target="message"></p> -->
   <!-- </div> -->
+
+  <!-- advanced version -->
+
+  <div data-controller="hello">
+    <input data-hello-target="name" type="text">
+    <button data-action="click->hello#greet">Greet</button>
+
+    <p data-hello-target="message"></p>
+
+    <button 
+      data-hello-target="excitmentBtn"
+      data-action="click->hello#excitedToggle"
+      hidden
+    >
+      change excitment
+    </button>
+  </div>
 
   <!-- <div data-controller="clipboard"> -->
   <!--   PIN1: <input data-clipboard-target="source" type="text" value="12345" readonly> -->
@@ -25,14 +44,25 @@
   <!--   <span data-clipboard-target="write"></span> -->
   <!-- </div> -->
 
-  <div data-controller="slideshow">
-    <button data-action="slideshow#previous" data-slideshow-curidx-value="2"> ← </button>
-    <button data-action="slideshow#next"> → </button>
+  <!-- <div data-controller="slideshow"> -->
+  <!--   <button data-action="slideshow#previous" data-slideshow-curidx-value="2"> ← </button> -->
+  <!--   <button data-action="slideshow#next"> → </button> -->
 
-    <div data-slideshow-target="slide">🐵</div>
-    <div data-slideshow-target="slide">🙈</div>
-    <div data-slideshow-target="slide">🙉</div>
-    <div data-slideshow-target="slide">🙊</div>
+  <!--   <div data-slideshow-target="slide">🐵</div> -->
+  <!--   <div data-slideshow-target="slide">🙈</div> -->
+  <!--   <div data-slideshow-target="slide">🙉</div> -->
+  <!--   <div data-slideshow-target="slide">🙊</div> -->
+  <!-- </div> -->
+
+  <!-- <div data-controller="validation"> -->
+  <!--   <input data-validation-target="password" name="password" type="text" value="" /> -->
+  <!--   <button data-action="validation#validate">validate</button> -->
+  <!--   <div> -->
+  <!--     <p data-validation-target="errorcontainer" hidden>errors : -->
+  <!--       <span data-validation-target="errormessage"></span> -->
+  <!--     </p> -->
+  <!--     <p data-validation-target="successmessage" hidden>Password success!</p> -->
+  <!--   </div> -->
   </div>
 </body>
 </html>
